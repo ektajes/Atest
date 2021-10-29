@@ -1,0 +1,13 @@
+.navbar{
+    background-color: lightslategray!important;
+    color: #fff!important;
+}
+
+.navbar li a{
+    color: #fff!important;
+}
+.navbar li.active a{
+    color: #111!important;
+}.navbar a{
+    color: #fff!important;
+}
