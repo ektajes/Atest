@@ -12,15 +12,22 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginform!:FormGroup;
 email:any;
+chk:any;
 loginval:any;
 password:any;
+msg:any;
   constructor(private fb:FormBuilder, private log:LoginService, private router:Router) {
 this.loginform=this.fb.group({
 email:['', Validators.required],
-password:['', Validators.required]
+password:['', Validators.required],
+check:[false, Validators.requiredTrue]
 })
    }
-
+   fieldsChange(values:any):void {
+    console.log(values.currentTarget.checked);
+   
+    this.chk=true; this.msg="by clicking , you are accepting t and c";
+  }
    onSubmit(loginform:any):any
 
    {

@@ -12,11 +12,7 @@ export class AppComponent {
 profile!:any[];
   constructor(private prof:ProfileService, public router:Router){}
   ngOnInit(){
-this.getprofiledata();
+
   }
-  getprofiledata(){
-    this.prof.getprofile().subscribe(res=>{
-      this.profile=res;
-    })
-  }
+
 }

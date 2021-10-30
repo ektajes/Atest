@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+secc!:boolean;
+data:any;
 
   ngOnInit(): void {
+    if(localStorage.getItem('username')!==null){
+  this.secc=true;
+    }
   }
 
 }
